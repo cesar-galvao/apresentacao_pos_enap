@@ -1,0 +1,212 @@
+[
+  {
+    "objectID": "index.html#dados",
+    "href": "index.html#dados",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Dados",
+    "text": "Dados\n \n\nO que são?\n\n \n\nO que dá para fazer com eles?"
+  },
+  {
+    "objectID": "index.html#dados-1",
+    "href": "index.html#dados-1",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Dados",
+    "text": "Dados"
+  },
+  {
+    "objectID": "index.html#tabelas",
+    "href": "index.html#tabelas",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Tabelas",
+    "text": "Tabelas"
+  },
+  {
+    "objectID": "index.html#tabelas-1",
+    "href": "index.html#tabelas-1",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Tabelas",
+    "text": "Tabelas\n \n\n1 linha por observação\n1 variável em cada coluna"
+  },
+  {
+    "objectID": "index.html#tipos-de-dados",
+    "href": "index.html#tipos-de-dados",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Tipos de dados",
+    "text": "Tipos de dados\n \n\nNuméricos\n\nContínuos\nDiscretos\n\nCategóricos\n\nOrdinais\nNominais"
+  },
+  {
+    "objectID": "index.html#tipos-de-dados-1",
+    "href": "index.html#tipos-de-dados-1",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Tipos de dados",
+    "text": "Tipos de dados\n \n\nMas hoje tudo é dado, inclusive imagens, sons, vídeos e texto.\n\n \n\nPara tudo isso existem formas de trabalhar e é em posse das técnicas que conseguimos elaborar processos efetivos e eficientes."
+  },
+  {
+    "objectID": "index.html#técnicas",
+    "href": "index.html#técnicas",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Técnicas",
+    "text": "Técnicas\n \n\nA maior evidência de um trabalho feito sem observar as técnicas disponíveis é uma coleta de dados inadequada (ou simplesmente errada).\n\n \n\nTemos que saber a priori o que queremos medir e avaliar se estamos de fato medindo o que planejamos."
+  },
+  {
+    "objectID": "index.html#técnicas-1",
+    "href": "index.html#técnicas-1",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Técnicas",
+    "text": "Técnicas\n\nNosso trabalho exige um estudo experimental?\nBasta um estudo observacional (que envolve também análise de dados administrativos)?\nEstamos fazendo um estudo com base em uma amostra ou em população (censo)?\n\nEssas abordagens fornecem informações diferentes e nos fornecem tipos diferentes de evidências.\nPor exemplo: causalidade, generalização, precisão, validade."
+  },
+  {
+    "objectID": "index.html#o-que-é-estatística",
+    "href": "index.html#o-que-é-estatística",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "O que é estatística?",
+    "text": "O que é estatística?\n \n\nA pessoa\nA disciplina\nA medida: total, média, desvio-padrão, etc.\n\n \n\nProbabilidade: pensar em coisas como eventos aleatórios, i.e. não determinísticos. Os resultados variam, possivelmente com um padrão."
+  },
+  {
+    "objectID": "index.html#o-que-é-estatística-1",
+    "href": "index.html#o-que-é-estatística-1",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "O que é estatística?",
+    "text": "O que é estatística?\n \n\nEstatística descritiva: mas descrever o que?\nEstatística inferencial: inferir o que sobre o que?"
+  },
+  {
+    "objectID": "index.html#visão-geral",
+    "href": "index.html#visão-geral",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Visão geral",
+    "text": "Visão geral\n \n\nmedidas de tendência central, dispersão, associação\nVisualizações comuns: histogramas, boxplots, scatterplots, mapas, tabelas de contingência."
+  },
+  {
+    "objectID": "index.html#tendência-central",
+    "href": "index.html#tendência-central",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Tendência central",
+    "text": "Tendência central\nMédia - a famosa\n \n\\[\\bar{x} = \\frac{\\sum_{i=1}^{n} x_i}{n}\\] Exemplo:\n\n\\(x = (1, 3, 5)\\),\n\n\\(x_1 = 1\\), \\(x_2 = 3\\), \\(x_3 = 5\\), \\(n = 3\\),\n\n\\(\\bar{x} = \\frac{1 + 3 + 5}{3} = 3\\)"
+  },
+  {
+    "objectID": "index.html#tendência-central-1",
+    "href": "index.html#tendência-central-1",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Tendência central",
+    "text": "Tendência central\n \nE se \\(x = (0, 3, 6)\\)?\nE \\(x = (1, 3, 20)\\)?\n \n\nA média é afetada por valores extremos!"
+  },
+  {
+    "objectID": "index.html#tendência-central-2",
+    "href": "index.html#tendência-central-2",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Tendência central",
+    "text": "Tendência central\n \nA mediana é o valor que separa nossos dados em duas partes iguais. É uma medida de posição e é menos afetada por valores extremos.\nA moda é o valor que aparece mais vezes!"
+  },
+  {
+    "objectID": "index.html#medidas-de-posição",
+    "href": "index.html#medidas-de-posição",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Medidas de posição",
+    "text": "Medidas de posição\nMedidas de posições comuns são:\n \n\nQuartis, sendo Q2 a média – Q1 separa 25% de 75%.\nQuantis, separando qualquer percentual.\nIntervalo interquartil: \\(Q_3 - Q_1\\). Indica o intervalo que contem os 50% centrais."
+  },
+  {
+    "objectID": "index.html#histograma-e-boxplot",
+    "href": "index.html#histograma-e-boxplot",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Histograma e boxplot",
+    "text": "Histograma e boxplot"
+  },
+  {
+    "objectID": "index.html#dispersão",
+    "href": "index.html#dispersão",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Dispersão",
+    "text": "Dispersão\n \nMedidas de dispersão são importantes para saber se nossos dados estão concentrados ou espalhados – variância e desvio padrão."
+  },
+  {
+    "objectID": "index.html#dispersão-1",
+    "href": "index.html#dispersão-1",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Dispersão",
+    "text": "Dispersão\nVeremos à frente que medidas de dispersão são essenciais para fazermos inferência.\n\n\n\nVariância: \\(\\sigma^2 = \\frac{\\sum_{i=1}^{n} (x_i - \\bar{x})^2}{n}\\)\nDesvio-padrão: \\(\\sigma = \\sqrt{\\sigma^2}\\)\nCorrelação: \\(\\rho = \\frac{\\sum_{i=1}^{n} (x_i - \\bar{x})(y_i - \\bar{y})}{\\sigma_x\\sigma_y} = \\frac{\\text{Cov}(x,y)}{\\sigma_x\\sigma_y}\\), \\(\\rho \\in (-1, 1)\\)"
+  },
+  {
+    "objectID": "index.html#correlação",
+    "href": "index.html#correlação",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Correlação",
+    "text": "Correlação"
+  },
+  {
+    "objectID": "index.html#implementação",
+    "href": "index.html#implementação",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Implementação",
+    "text": "Implementação\n \nTudo isso está implementado em pacotes estatísticos ou em planilhas. Basta procurar como fazer!\n\nDocumentação dos programas\nChatGPT ou alguma outra IA\nStackOverflow ou Google tal qual os astecas"
+  },
+  {
+    "objectID": "index.html#cautela",
+    "href": "index.html#cautela",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Cautela",
+    "text": "Cautela\n \nTudo que foi mostrado até agora funciona para variáveis quantitativas ou numéricas.\nTécnicas exploratórias para dados categóricos comumente são resumidos a frequências (e gráficos como os de barras) e tabelas de contingência."
+  },
+  {
+    "objectID": "index.html#tabelas-de-contingência",
+    "href": "index.html#tabelas-de-contingência",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Tabelas de contingência",
+    "text": "Tabelas de contingência\n \n\n\n\n\n\n\nNegativo\nPositivo\n\n\n\n\nTestado Neg.\n23\n20\n\n\nTestado Pos.\n31\n26\n\n\n\n\n\n \nLembre-se, temos que usar a técnica adequada. Para esse tipo de dado, procuramos por técnicas de análise de dados categorizados."
+  },
+  {
+    "objectID": "index.html#estatística-inferencial-1",
+    "href": "index.html#estatística-inferencial-1",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Estatística inferencial",
+    "text": "Estatística inferencial\n \nFazemos inferência quando estamos trabalhando com uma amostra e queremos supor o comportamento geral da população.\nPor exemplo: calculamos a média da altura das pessoas na sala. Será que podemos dizer que essa média representa a média da população?"
+  },
+  {
+    "objectID": "index.html#estatística-inferencial-2",
+    "href": "index.html#estatística-inferencial-2",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Estatística inferencial",
+    "text": "Estatística inferencial\n \nDepende da formulação de hipóteses:\n\nHipótese nula (\\(H_0\\)): a média da amostra é igual à média da população.\nHipótese alternativa (\\(H_1\\)): a média da amostra é diferente da média da população.\n\nMas podemos testar várias coisas, como proporções, variâncias, etc."
+  },
+  {
+    "objectID": "index.html#estatística-inferencial-3",
+    "href": "index.html#estatística-inferencial-3",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Estatística inferencial",
+    "text": "Estatística inferencial\n \nPara testar hipóteses matematicamente, usamos testes de hipóteses e, para isso, usamos teoria de probabilidade, pois estamos trabalhando com fenômenos com resultados que variam, ou seja, aleatórios.\nIsso faz com que tenhamos que lidar com pressupostos de testes estatísticos. É com base neles que garantimos que estamos errando o que estamos errando.\nTodo modelo é errado. Uns funcionam melhor que outros."
+  },
+  {
+    "objectID": "index.html#teste-t",
+    "href": "index.html#teste-t",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Teste t",
+    "text": "Teste t\n \nÉ famoso como teste para comparação de médias.\nPressuposto: normalidade dos dados – descrever nossos dados por uma distribuição normal, de sino, parece razoável…\n… para isso também existe um teste."
+  },
+  {
+    "objectID": "index.html#teste-t-1",
+    "href": "index.html#teste-t-1",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Teste t",
+    "text": "Teste t"
+  },
+  {
+    "objectID": "index.html#p-valor",
+    "href": "index.html#p-valor",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "p-valor",
+    "text": "p-valor\n \nNada mais é que a probabilidade de observarmos um resultado tão extremo quanto o observado (do resultado do teste), dado que a hipótese nula é verdadeira.\n \np &lt; 0,05 é um valor comum para rejeitar a hipótese nula, mas é apenas um balizador. Não pode ser uma verdade absoluta!"
+  },
+  {
+    "objectID": "index.html#regressão-linear",
+    "href": "index.html#regressão-linear",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Regressão linear",
+    "text": "Regressão linear\n \nTambém é uma técnica inferencial muito comum e é usada para entender a relação entre variáveis e têm seus pressupostos.\nInterpretação básica: para cada unidade de aumento em \\(x\\), \\(y\\) aumenta \\(\\beta\\) unidades.\nSe \\(y\\) for o preço do imóvel e \\(x\\) sua área, podemos pensar em\n\\[\\hat{y} = 10000 + 50x\\]"
+  },
+  {
+    "objectID": "index.html#machine-learning-1",
+    "href": "index.html#machine-learning-1",
+    "title": "Aplicações de estatística no uso de dados",
+    "section": "Machine learning",
+    "text": "Machine learning\n \nTécnicas de machine learning nada mais são que aplicações de técnicas estatísticas, como regressões, árvores de decisão, técnicas de classificação, etc.\nÉ necessário entender o que são os resultados e como interpretá-los para:\n\nNão confiar cegamente na máquina;\nNão ficar preso(a) no inferno dos tutoriais."
+  }
+]
