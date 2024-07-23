@@ -1,0 +1,25 @@
+project:
+  type: website
+
+website:
+  title: "Aplicações de estatística no uso de dados"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+format: 
+  clean-revealjs:
+    incremental: true
+html-math-method:
+  method: mathjax
+  url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+author:
+ - name: César A. Galvão
+   email: cesar.galvao@enap.gov.br
+   affiliations: Enap
+lang: pt
+date: last-modified
+
+
+

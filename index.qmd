@@ -1,0 +1,392 @@
+---
+title: Aplicações de estatística no uso de dados
+subtitle: Uma campanha de despesadelização
+---
+
+## Dados
+
+ 
+
+-   O que são?
+
+ 
+
+-   O que dá para fazer com eles?
+
+## Dados
+
+ 
+
+![](data_cycle.png){fig-align="center"}
+
+## Tabelas
+
+![](tabela.png){fig-align="center"}
+
+## Tabelas
+
+ 
+
+-   1 linha por observação
+-   1 variável em cada coluna
+
+## Tipos de dados
+
+ 
+
+-   Numéricos
+    -   Contínuos
+    -   Discretos
+-   Categóricos
+    -   Ordinais
+    -   Nominais
+
+## Tipos de dados
+
+ 
+
+-   Mas hoje tudo é dado, inclusive imagens, sons, vídeos e texto.
+
+ 
+
+-   Para tudo isso existem formas de trabalhar e é em posse das técnicas que conseguimos elaborar processos efetivos e eficientes.
+
+## Técnicas
+
+ 
+
+-   A maior evidência de um trabalho feito sem observar as técnicas disponíveis é uma coleta de dados inadequada (ou simplesmente errada).
+
+ 
+
+-   Temos que saber a priori o que queremos medir e avaliar se estamos de fato medindo o que planejamos.
+
+## Técnicas
+
+-   Nosso trabalho exige um estudo experimental?
+-   Basta um estudo observacional (que envolve também análise de dados administrativos)?
+-   Estamos fazendo um estudo com base em uma amostra ou em população (censo)?
+
+Essas abordagens fornecem informações diferentes e nos fornecem tipos diferentes de evidências.
+
+**Por exemplo:** causalidade, generalização, precisão, validade.
+
+# Estatística
+
+## O que é estatística?
+
+ 
+
+-   A pessoa
+-   A disciplina
+-   A medida: total, média, desvio-padrão, etc.
+
+ 
+
+-   Probabilidade: pensar em coisas como eventos aleatórios, i.e. não determinísticos. Os resultados variam, possivelmente com um padrão.
+
+## O que é estatística?
+
+ 
+
+-   Estatística descritiva: mas descrever o que?
+-   Estatística inferencial: inferir o que sobre o que?
+
+# Estatística descritiva
+
+## Visão geral
+
+ 
+
+-   medidas de tendência central, dispersão, associação
+-   Visualizações comuns: histogramas, boxplots, scatterplots, mapas, tabelas de contingência.
+
+## Tendência central
+
+Média - a famosa
+
+ 
+
+$$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$$ Exemplo:
+
+-   $x = (1, 3, 5)$,\
+-   $x_1 = 1$, $x_2 = 3$, $x_3 = 5$, $n = 3$,\
+-   $\bar{x} = \frac{1 + 3 + 5}{3} = 3$
+
+## Tendência central
+
+ 
+
+E se $x = (0, 3, 6)$?\
+E $x = (1, 3, 20)$?
+
+ 
+
+-   A média é afetada por valores extremos!
+
+## Tendência central
+
+ 
+
+A mediana é o valor que separa nossos dados em duas partes iguais. É uma medida de **posição** e é menos afetada por valores extremos.
+
+A moda é o valor que aparece mais vezes!
+
+## Medidas de posição
+
+Medidas de posições comuns são:
+
+ 
+
+-   Quartis, sendo Q2 a média -- Q1 separa 25% de 75%.
+-   Quantis, separando qualquer percentual.
+-   Intervalo interquartil: $Q_3 - Q_1$. Indica o intervalo que contem os 50% centrais.
+
+## Histograma e boxplot
+
+```{r}
+# Load necessary libraries
+library(ggplot2)
+library(cowplot)
+
+# Generate sample data with outliers
+set.seed(123)
+data <- rnorm(100)
+data <- c(data, 3, 4, 5) # Adding a few outliers
+data_frame <- data.frame(value = data,
+                         x = 1)
+
+# Create the boxplot with mean value indicated by a red diamond
+boxplot_gg <- ggplot(data_frame, aes(x = x, y = value)) +
+    geom_boxplot(outlier.colour = "blue", outlier.shape = 16, outlier.size = 2) +
+    stat_summary(fun.y=mean, geom="point", shape=18, size=5, color="red", fill="red")+
+    ggtitle("Boxplot") +
+    theme_minimal()
+
+# Create the histogram
+histogram_gg <- ggplot(data_frame, aes(x = value)) +
+  geom_histogram(binwidth = 1, fill = "blue", color = "black", alpha = 0.7) +
+  ggtitle("Histograma") +
+  theme_minimal()
+
+# Combine the plots side by side using cowplot
+combined_plot <- plot_grid(boxplot_gg, histogram_gg, nrow = 1)
+
+# Display the combined plot
+print(combined_plot)
+
+```
+
+## Dispersão
+
+ 
+
+Medidas de dispersão são importantes para saber se nossos dados estão concentrados ou espalhados -- variância e desvio padrão.
+
+```{r}
+
+# Set up the plotting area for two plots side by side
+par(mfrow = c(1, 2))
+
+# Plot the first normal distribution with variance 0.5
+curve(dnorm(x, mean = 0, sd = sqrt(0.5)), from = -4, to = 4, 
+      main = "Variância 0,5", 
+      ylab = "Density", xlab = "x", col = "blue", lwd = 2)
+
+# Plot the second normal distribution with variance 5
+curve(dnorm(x, mean = 0, sd = sqrt(10)), from = -4, to = 4, 
+      main = "Variância 10", 
+      ylab = "Density", xlab = "x", col = "red", lwd = 2)
+
+# Reset plotting area to default
+par(mfrow = c(1, 1))
+```
+
+## Dispersão
+
+Veremos à frente que medidas de dispersão são essenciais para fazermos inferência.
+
+\
+
+-   Variância: $\sigma^2 = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n}$
+
+-   Desvio-padrão: $\sigma = \sqrt{\sigma^2}$
+
+-   Correlação: $\rho = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sigma_x\sigma_y} = \frac{\text{Cov}(x,y)}{\sigma_x\sigma_y}$, $\rho \in (-1, 1)$
+
+## Correlação
+
+```{r}
+# Load necessary libraries
+library(ggplot2)
+library(cowplot)
+
+# Generate sample data
+set.seed(123)
+n <- 100
+
+# High correlation data
+x_high <- rnorm(n)
+y_high <- 2 * x_high + rnorm(n, sd = 1)
+high_corr_data <- data.frame(x = x_high, y = y_high)
+
+# Low correlation data
+x_low <- rnorm(n)
+y_low <- rnorm(n)
+low_corr_data <- data.frame(x = x_low, y = y_low)
+
+# Create the scatter plots
+plot_high_corr <- ggplot(high_corr_data, aes(x = x, y = y)) +
+  geom_point(color = "blue") +
+  ggtitle("High Correlation") +
+  theme_bw()
+
+plot_low_corr <- ggplot(low_corr_data, aes(x = x, y = y)) +
+  geom_point(color = "red") +
+  ggtitle("Low Correlation") +
+  theme_bw()
+
+# Combine the plots side by side using cowplot
+combined_plot <- plot_grid(plot_high_corr, plot_low_corr, nrow = 1)
+
+# Display the combined plot
+print(combined_plot)
+
+```
+
+## Implementação
+
+ 
+
+Tudo isso está implementado em pacotes estatísticos ou em planilhas. Basta procurar como fazer!
+
+-   Documentação dos programas
+-   ChatGPT ou alguma outra IA
+-   StackOverflow ou Google tal qual os astecas
+
+## Cautela
+
+ 
+
+Tudo que foi mostrado até agora funciona para variáveis *quantitativas* ou *numéricas*.
+
+Técnicas exploratórias para dados *categóricos* comumente são resumidos a frequências (e gráficos como os de barras) e tabelas de contingência.
+
+## Tabelas de contingência
+
+\ 
+
+
+```{r}
+set.seed(123)
+data <- data.frame(
+  Category_A = sample(c("Testado Pos.", "Testado Neg."), 100, replace = TRUE),
+  Category_B = sample(c("Positivo", "Negativo"), 100, replace = TRUE)
+)
+
+# Create contingency table
+contingency_table <- table(data$Category_A, data$Category_B)
+
+# Display contingency table using kable
+knitr::kable(contingency_table, booktabs = TRUE)
+```
+
+\ 
+
+Lembre-se, temos que usar a técnica adequada. Para esse tipo de dado, procuramos por técnicas de **análise de dados categorizados**.
+
+# Estatística inferencial
+
+## Estatística inferencial
+
+\ 
+
+Fazemos inferência quando estamos trabalhando com uma amostra e queremos supor o comportamento geral da população.  
+
+Por exemplo: calculamos a média da altura das pessoas na sala. Será que podemos dizer que essa média representa a média da população?
+
+## Estatística inferencial
+
+\ 
+
+Depende da formulação de hipóteses:
+
+-   Hipótese nula ($H_0$): a média da amostra é igual à média da população.
+-   Hipótese alternativa ($H_1$): a média da amostra é diferente da média da população.  
+
+Mas podemos testar várias coisas, como proporções, variâncias, etc.
+
+
+## Estatística inferencial
+
+\ 
+
+Para testar hipóteses matematicamente, usamos testes de hipóteses e, para isso, usamos **teoria de probabilidade**, pois estamos trabalhando com fenômenos com resultados que variam, ou seja, aleatórios.
+
+Isso faz com que tenhamos que lidar com **pressupostos de testes estatísticos**. É com base neles que garantimos que estamos errando o que estamos errando.
+
+Todo modelo é errado. Uns funcionam melhor que outros.
+
+
+## Teste t
+
+\ 
+
+É famoso como teste para comparação de médias.
+
+**Pressuposto:** normalidade dos dados -- descrever nossos dados por uma distribuição normal, de sino, parece razoável...
+
+... para isso **também** existe um teste.
+
+## Teste t
+
+```{r}
+curve(dnorm(x, mean = 175, sd = 1), from = 170, to = 185, 
+      main = "", 
+      ylab = "", xlab = "Altura", col = "blue", lwd = 2)
+curve(dnorm(x, mean = 179, sd = 1), from = 170, to = 185, 
+      main = "", 
+      ylab = "", xlab = "Altura", col = "blue", lwd = 2,
+      lty = "dashed", add = TRUE)
+```
+
+
+## p-valor
+
+\ 
+
+Nada mais é que a probabilidade de observarmos um resultado tão extremo quanto o observado (do resultado do teste), dado que a hipótese nula é verdadeira.
+
+\ 
+
+p < 0,05 é um valor comum para rejeitar a hipótese nula, mas é apenas um balizador. Não pode ser uma verdade absoluta!
+
+
+## Regressão linear
+
+\ 
+
+Também é uma técnica inferencial muito comum e é usada para entender a relação entre variáveis e têm seus pressupostos.
+
+**Interpretação básica:** para cada unidade de aumento em $x$, $y$ aumenta $\beta$ unidades.
+
+Se $y$ for o preço do imóvel e $x$ sua área, podemos pensar em
+
+$$\hat{y} = 10000 + 50x$$
+
+# Exemplos
+
+House Price Prediction
+
+# Machine learning
+
+## Machine learning
+
+\ 
+
+Técnicas de machine learning nada mais são que aplicações de técnicas estatísticas, como regressões, árvores de decisão, técnicas de classificação, etc.
+
+É necessário entender o que são os resultados e como interpretá-los para:
+
+- Não confiar cegamente na máquina;
+- Não ficar preso(a) no inferno dos tutoriais.
